@@ -102,7 +102,7 @@ def load_to_bigquery(df: pd.DataFrame):
             bigquery.SchemaField("extracted_at", "TIMESTAMP"),
             bigquery.SchemaField("heat_stress_index", "FLOAT"),
         ],
-        write_disposition="WRITE_APPEND" # Append logs continuously over days
+        write_disposition="WRITE_APPEND" 
     )
     
     logging.info(f"Loading data into BigQuery table: {PROJECT_ID}.{DATASET_ID}.{TABLE_ID}")
